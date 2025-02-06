@@ -45,4 +45,26 @@ $update = $learnOOPPPP -> all();
 echo '<br>';
 echo $update;
 
+echo '<br>';
 
+
+
+class pusshi{
+    public $helloo;
+    public $color;
+    public $work;
+
+    function __construct($helloo, $color, $work){
+        $this->helloo = $helloo;
+        $this->color = $color;
+        $this->work = $work;
+    }
+
+    public function catDetails(){
+        return "My Cat Name Is " . " " . $this->helloo . "." . " My Cats color is " . $this->color . " . " . "Pushi is" . " ". $this->work . " now";
+    }
+}
+
+$example = new pusshi("Hasina", "white", "eating");
+$finalResult = $example->catDetails();
+echo $finalResult;
