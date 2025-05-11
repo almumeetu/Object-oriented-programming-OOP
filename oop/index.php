@@ -10,6 +10,7 @@ echo "<br>";
 echo "Hello Success!";
 echo "<br>";
 
+// First Class
 class person {
     public $name;
     public $age;
@@ -33,32 +34,56 @@ echo "<br>";
 echo "My Second Class";
 echo "<br>";
 
+// Second Class (With Constructor)
+class myFriendInfo {
+    public $myFriendName = "Shihab";
+    public $myFriendDeg = "Android Developer";
 
-class myFrindInfo {
-    public $myFriendName;
-    public $myFriendDeg;
-
-    function __construct($myFriendName, $myFriendDeg) {
-        $this-> myFriendName = $myFriendName;
-        $this-> myFriendDeg = $myFriendDeg;
+    public function __construct($myFriendName, $myFriendDeg) {
+        $this->myFriendName = $myFriendName;
+        $this->myFriendDeg = $myFriendDeg;
     }
 
-
-    public function allInfo(){
-        return $this->myFriendName . "is Working on" . " " . $this->myFriendDeg . "." . "</br>";
+    public function allInfo() {
+        return $this->myFriendName . " is working as " . $this->myFriendDeg . "." . "<br>";
     }
 }
 
-$shazzadResult = new myFrindInfo ("Shazzad Hossain", "Software");
-$finalResult = $shazzadResult-> allInfo();
-$ibrahimResult = new myFrindInfo("Ibrahim Hossain","Digital Marketing");
-$finalResult2 = $ibrahimResult-> allInfo();
-echo "$finalResult";
+
+// $shazzadResult = new myFrindInfo ("Shazzad Hossain", "Software");
+// $finalResult = $shazzadResult-> allInfo();
+// $ibrahimResult = new myFrindInfo("Ibrahim Hossain","Digital Marketing");
+// $finalResult2 = $ibrahimResult-> allInfo();
+// echo "$finalResult";
+// echo "<br>";
+// echo "$finalResult2";
+
+// Object creation and output (outside the class)
+$shihabResult = new myFriendInfo("Shihab", "Android Developer");
+$shihabResult2 = new myFriendInfo("Saikat", "WordPress Developer");
+$shihabFinalResult = $shihabResult->allInfo();
+$saikatFinalResult = $shihabResult2->allInfo();
+echo $shihabFinalResult;
 echo "<br>";
-echo "$finalResult2";
+echo $saikatFinalResult;
 
 
+// Second Class (Without Constructor)
+class myFrindInfowithoutConstructor {
+    public $myFriendName = "Shihab";
+    public $myFriendDeg = "Android Developer";
 
+    public function allInfo() {
+        return $this->myFriendName . " is working as " . $this->myFriendDeg . "." . "<br>";
+    }
+}
+
+$nowResult = new myFrindInfowithoutConstructor();
+echo "<br>";
+echo "Without Constructor";
+echo "<br>";
+echo $nowResult->allInfo();
+echo "<br>";
 ?>
 
 <?php include "inc/footer.php"; ?>
