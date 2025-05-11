@@ -1,6 +1,11 @@
+<?php include "inc/header.php"; ?>
+
+
 <?php
 
 
+
+echo "Class, Property, Method and Object";
 echo "<br>";
 echo "Hello Success!";
 echo "<br>";
@@ -40,15 +45,20 @@ class myFrindInfo {
 
 
     public function allInfo(){
-        return $this->myFriendName . "is Working on" . " " . $this->myFriendDeg . ".";
+        return $this->myFriendName . "is Working on" . " " . $this->myFriendDeg . "." . "</br>";
     }
 }
 
 $shazzadResult = new myFrindInfo ("Shazzad Hossain", "Software");
 $finalResult = $shazzadResult-> allInfo();
+$ibrahimResult = new myFrindInfo("Ibrahim Hossain","Digital Marketing");
+$finalResult2 = $ibrahimResult-> allInfo();
 echo "$finalResult";
-
+echo "<br>";
+echo "$finalResult2";
 
 
 
 ?>
+
+<?php include "inc/footer.php"; ?>
